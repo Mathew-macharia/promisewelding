@@ -1,0 +1,281 @@
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                url('../assets/public/landing image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-xl) var(--container-padding);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+/* About Section */
+.about {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-background-alt);
+}
+
+.about .container {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Featured Services */
+.featured-services {
+    padding: var(--spacing-xl) 0;
+}
+
+.featured-services h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-card {
+    background: var(--color-background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-base);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover h3 {
+    color: var(--color-primary);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    margin: 0 auto var(--spacing-md);
+}
+
+.service-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.services-cta {
+    text-align: center;
+}
+
+/* Testimonials Preview */
+.testimonials-preview {
+    background-color: var(--color-background-alt);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials-preview h2 {
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 40px; /* Increased side padding for arrows */
+}
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Rest of the existing testimonials CSS */
+.testimonials-slider .swiper-slide {
+    height: auto;
+}
+
+.testimonial-card {
+    background: var(--color-background);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-card blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.testimonial-card cite {
+    color: var(--color-text-light);
+    font-style: normal;
+    display: block;
+    margin-top: var(--spacing-sm);
+}
+
+/* Swiper Pagination Customization */
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-text-light);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet:hover {
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .testimonials-slider {
+        max-width: 90%;
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+
+    .testimonial-card blockquote {
+        font-size: 1rem;
+    }
+}
+
+/* Contact Banner */
+.contact-banner {
+    background-color: var(--color-background-alt);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.contact-banner h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contact-banner p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text);
+    font-size: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.contact-buttons .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+.contact-buttons .whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .service-card {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+} 

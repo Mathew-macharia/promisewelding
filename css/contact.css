@@ -1,0 +1,257 @@
+/* Contact Page Styles */
+.contact-hero {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-method {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contact-method h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-method p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.contact-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.contact-address {
+    font-style: normal;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Contact Page Business Hours (not footer) */
+.contact-section .business-hours {
+    background: var(--color-background-alt);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.contact-section .business-hours h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-section .business-hours i {
+    font-size: 1.2rem;
+}
+
+.contact-section .business-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section .business-hours li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .business-hours li:last-child {
+    border-bottom: none;
+}
+
+.contact-section .business-hours span {
+    font-weight: 500;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Contact Page Buttons */
+.contact-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section .primary-btn {
+    background-color: var(--color-primary);
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-section .primary-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.contact-section .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+.contact-section .whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* Map Section */
+.map-section {
+    padding: 4rem 0;
+    background: var(--color-background-alt);
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-hero {
+        margin-top: 60px;
+        padding: 3rem 0;
+    }
+    
+    .contact-grid {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        margin-top: 50px;
+        padding: 2rem 0;
+    }
+    
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-method,
+    .contact-form,
+    .contact-section .business-hours {
+        padding: 1.25rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.75rem;
+    }
+} 
