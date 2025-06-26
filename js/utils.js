@@ -34,6 +34,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Initialize smooth scroll functionality
         initializeSmoothScroll();
+
+        // Initialize service image interaction after navigation is loaded
+        initServiceImageInteraction();
+
+        // Initialize testimonials slider if we're on a page with testimonials
+        if (document.querySelector('.testimonials-slider')) {
+            const swiper = new Swiper('.testimonials-slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+        // Add click handler for service cards
+        document.addEventListener('click', smoothScrollToSection);
+        
+        // Handle scroll on page load
+        handleServicesPageScroll();
     } catch (error) {
         console.error('Error loading components:', error);
     }
@@ -169,35 +199,4 @@ function initServiceImageInteraction() {
             activeImage = null;
         }
     });
-}
-
-// Add event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize testimonials slider
-    const swiper = new Swiper('.testimonials-slider', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    // Add click handler for service cards
-    document.addEventListener('click', smoothScrollToSection);
-    
-    // Handle scroll on page load
-    handleServicesPageScroll();
-
-    // Initialize service image interaction
-    initServiceImageInteraction();
-}); 
+} 

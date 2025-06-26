@@ -6,12 +6,14 @@ function initializeMenu() {
     if (navToggle && navLinks) {
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active'); // Toggle active class on the button
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
                 navLinks.classList.remove('active');
+                navToggle.classList.remove('active'); // Remove active class from button
             }
         });
 
@@ -19,6 +21,7 @@ function initializeMenu() {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                navToggle.classList.remove('active'); // Remove active class from button
             });
         });
     }

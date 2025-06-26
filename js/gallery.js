@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
             'assets/gallery/gates/gate5.jpg',
             'assets/gallery/gates/gate6.jpg',
             'assets/gallery/gates/gate7.jpg',
-            'assets/gallery/gates/gate8.jpg'
+            'assets/gallery/gates/gate8.jpg',
+            'assets/gallery/gates/gate9.jpg',
+            'assets/gallery/gates/gate10.jpg',
+            'assets/gallery/gates/gate11.jpg'
         ],
         doors: [
             'assets/gallery/doors/door1.jpg',
@@ -27,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'assets/gallery/doors/door3.jpg',
             'assets/gallery/doors/door4.jpg',
             'assets/gallery/doors/door5.jpg',
-            'assets/gallery/doors/door6.jpg'
+            'assets/gallery/doors/door6.jpg',
+            'assets/gallery/doors/door7.jpg'
         ],
         windows: [
             'assets/gallery/windows/win1.jpg',
@@ -51,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'assets/gallery/roofing/roofing3.jpg',
             'assets/gallery/roofing/roofing4.jpg',
             'assets/gallery/roofing/roofing5.jpg',
+            'assets/gallery/roofing/railings.jpg'
         ],
         locks: [
             'assets/gallery/locks/lock.jpg',
@@ -60,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         custom: [
             'assets/gallery/custom/custom1.jpg',
             'assets/gallery/custom/custom2.jpg',
+            'assets/gallery/custom/custom3.jpg',
             'assets/gallery/custom/railings.jpg'
         ]
     };
